@@ -1,0 +1,14 @@
+..\..\output\stream_buffer.o: ..\..\freeRTOS\stream_buffer.c
+..\..\output\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\FreeRTOS.h
+..\..\output\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\..\output\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\FreeRTOSConfig.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\projdefs.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\portable.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\deprecated_definitions.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\portable\portmacro.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\mpu_wrappers.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\task.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\list.h
+..\..\output\stream_buffer.o: ..\..\freeRTOS\include\stream_buffer.h

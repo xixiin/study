@@ -1,0 +1,260 @@
+version: "4.1"
+name: stm32f103
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Startup
+      files:
+        - path: ../Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/arm/startup_stm32f101xb.s
+      folders: []
+    - name: User
+      files:
+        - path: ../Users/main.c
+        - path: ../Users/stm32f1xx_it.c
+        - path: ../Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
+      folders: []
+    - name: Drivers
+      files: []
+      folders:
+        - name: BSP
+          files:
+            - path: ../Drivers/BSP/OLED/OLED.c
+            - path: ../Drivers/BSP/key/key.c
+            - path: ../Drivers/BSP/led/led.c
+            - path: ../Drivers/BSP/TIME/timer.c
+            - path: ../Drivers/BSP/OLED/OLED_Data.c
+            - path: ../Drivers/BSP/encode/Encoder.c
+            - path: ../Drivers/BSP/Motor/Motor.c
+            - path: ../Drivers/BSP/Motor/PWM.c
+            - path: ../Drivers/BSP/PID/PID.c
+            - path: ../Drivers/BSP/bluetoos/bluetoos.c
+            - path: ../Drivers/BSP/MPU6050/MPU6050.c
+            - path: ../Drivers/BSP/MPU6050/MyI2C.c
+          folders: []
+        - name: SYSTEM
+          files:
+            - path: ../Drivers/SYSTEM/delay/delay.c
+            - path: ../Drivers/SYSTEM/uart1/uart1.c
+            - path: ../Drivers/SYSTEM/sys/sys.c
+          folders: []
+        - name: STM32F1xx_HAL_Driver
+          files:
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
+            - path: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
+          folders: []
+    - name: freeRTOS
+      files:
+        - path: ../freeRTOS/croutine.c
+        - path: ../freeRTOS/event_groups.c
+        - path: ../freeRTOS/FreeRTOSConfig.h
+        - path: ../freeRTOS/list.c
+        - path: ../freeRTOS/queue.c
+        - path: ../freeRTOS/stream_buffer.c
+        - path: ../freeRTOS/tasks.c
+        - path: ../freeRTOS/timers.c
+        - path: ../freeRTOS/FreeRTOS_demo.c
+      folders:
+        - name: include
+          files:
+            - path: ../freeRTOS/include/atomic.h
+            - path: ../freeRTOS/include/croutine.h
+            - path: ../freeRTOS/include/deprecated_definitions.h
+            - path: ../freeRTOS/include/event_groups.h
+            - path: ../freeRTOS/include/FreeRTOS.h
+            - path: ../freeRTOS/include/list.h
+            - path: ../freeRTOS/include/message_buffer.h
+            - path: ../freeRTOS/include/mpu_prototypes.h
+            - path: ../freeRTOS/include/mpu_syscall_numbers.h
+            - path: ../freeRTOS/include/mpu_wrappers.h
+            - path: ../freeRTOS/include/newlib-freertos.h
+            - path: ../freeRTOS/include/picolibc-freertos.h
+            - path: ../freeRTOS/include/portable.h
+            - path: ../freeRTOS/include/projdefs.h
+            - path: ../freeRTOS/include/queue.h
+            - path: ../freeRTOS/include/semphr.h
+            - path: ../freeRTOS/include/stack_macros.h
+            - path: ../freeRTOS/include/StackMacros.h
+            - path: ../freeRTOS/include/stream_buffer.h
+            - path: ../freeRTOS/include/task.h
+            - path: ../freeRTOS/include/timers.h
+          folders: []
+        - name: portable
+          files:
+            - path: ../freeRTOS/portable/heap_4.c
+            - path: ../freeRTOS/portable/port.c
+            - path: ../freeRTOS/portable/portmacro.h
+          folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: ffa7e189f71d46c9d0e2852e02b79fd6
+targets:
+  Template:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_HAL_DRIVER
+        - STM32F103xB
+      incList:
+        - ../Drivers/CMSIS/Device/ST/STM32F1xx/Include
+        - ../Drivers/STM32F1xx_HAL_Driver/Inc
+        - ../Drivers/CMSIS/Include
+        - ../Drivers
+        - ../Users
+        - ../Drivers/SYSTEM/delay
+        - ../Drivers/SYSTEM/uart1
+        - ../Drivers/SYSTEM/sys
+        - ../Drivers/BSP/key
+        - ../Drivers/BSP/led
+        - ../Drivers/BSP/OLED
+        - ../freeRTOS/include
+        - ../freeRTOS/portable
+        - ../freeRTOS
+        - ../Drivers/BSP/TIME
+        - ../Drivers/BSP/encode
+        - ../Drivers/BSP/Motor
+        - ../Drivers/BSP/RT
+        - ../Drivers/BSP/PID
+        - ../Drivers/BSP/bluetoos
+        - ../Drivers/BSP/MPU6050
+        - .cmsis/include
+        - MDK-ARM/RTE/_Template
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M3
+        floatingPointHardware: none
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x5000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      OpenOCD:
+        baseAddr: "0x08000000"
+        bin: ""
+        interface: cmsis-dap
+        target: stm32f1x
+    uploader: OpenOCD

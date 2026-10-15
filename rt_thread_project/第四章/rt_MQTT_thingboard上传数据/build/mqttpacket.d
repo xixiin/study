@@ -1,0 +1,11 @@
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTPacket.c
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\StackTrace.h
+.\build\mqttpacket.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTPacket.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTConnect.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTPublish.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTSubscribe.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTUnsubscribe.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTFormat.h
+.\build\mqttpacket.o: packages\kawaii-mqtt-latest\mqtt\MQTTPacket.h
+.\build\mqttpacket.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

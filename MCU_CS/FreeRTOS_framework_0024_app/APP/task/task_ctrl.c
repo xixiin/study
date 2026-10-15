@@ -1,0 +1,23 @@
+#include "task_ctrl.h"
+
+TaskHandle_t Task_ctrl;
+void Task_Ctrl(void *arg);
+
+
+void ctrl_task(void)
+{
+	
+	xTaskCreate(Task_Ctrl, (const char *)"Task_Ctrl", 1024, NULL, 2, &Task_ctrl);
+	
+}
+
+void Task_Ctrl(void *arg)
+{
+	hlw_puls_t event;
+	myprintf("d\r\n");
+	while(1)
+	{
+		work_cycle_entry();
+		vTaskDelay(10);
+	}
+}

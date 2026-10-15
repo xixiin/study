@@ -1,0 +1,40 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "SWM320-FreeRTOS",
+            "compilerPath": "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "intelliSenseMode": "clang-arm",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "defines": [
+                "__CC_ARM"
+            ],
+            "includePath": [
+                "${workspaceFolder}/APP",
+                "${workspaceFolder}/APP/FreeRTOS/include",
+                "${workspaceFolder}/APP/FreeRTOS/portable/RVDS/ARM_CM3",
+                "${workspaceFolder}/APP/task",
+                "${workspaceFolder}/APP/work",
+                "${workspaceFolder}/framework",
+                "${workspaceFolder}/framework/driver",
+                "${workspaceFolder}/framework/driver_port",
+                "${workspaceFolder}/framework/lib_loopbuf",
+                "${workspaceFolder}/framework/lib_utc",
+                "${workspaceFolder}/framework/lib_FAL/fal/src",
+                "${workspaceFolder}/framework/lib_FAL/fal/inc",
+                "${workspaceFolder}/framework/lib_FAL/fal_port",
+                "${workspaceFolder}/../../SWM320_StdPeriph_Driver/CSL/CMSIS/CoreSupport",
+                "${workspaceFolder}/../../SWM320_StdPeriph_Driver/CSL/CMSIS/DeviceSupport",
+                "${workspaceFolder}/../../SWM320_StdPeriph_Driver/CSL/SWM320_StdPeriph_Driver"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/../../SWM320_StdPeriph_Driver/CSL"
+                ],
+                "limitToSymbolsToHeaders": false
+            }
+        }
+    ]
+}
